@@ -1,0 +1,78 @@
+.Dialog {
+    z-index: 50;
+    position: fixed;
+    padding: 30px;
+    background-color: white;
+    left: 50%;
+    transform: translate(-50%, -420px);
+    visibility: hidden;
+    top: 160px;
+    box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+
+.Dialog h2 {
+    margin: 0 0 16px 0;
+    color: darkslategray;
+}
+
+.Dialog input {
+    display: block;
+    font-family: "Inconsolata", sans-serif;
+    text-align: center;
+    padding: 16px;
+    font-size: 24px;
+    border: 2px solid #b1b1f8;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.Dialog input:focus {
+    border-color: #6c6ce9;
+}
+
+.Show {
+    transform: translate(-50%, 0);
+    visibility: visible;
+}
+
+.Close {
+    position: absolute;
+    color: white;
+    font-size: 24px;
+    background-color: #8787f0;
+    padding: 0 8px;
+    border-radius: 50%;
+    right: -10px;
+    top: -10px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.Close:hover {
+    color: yellow;
+}
+
+.LoaderHolder {
+    width: 293px;
+    height: 185px;
+    padding-top: 32px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.LoaderHolder h4 {
+    color: #b1b1f8;
+    margin-top: 0;
+}
+
+.LoaderHolder > div div {
+    background-color: #b1b1f8;
+}
+
+.Error {
+    color: red;
+    margin: 8px 0 0 0;
+}

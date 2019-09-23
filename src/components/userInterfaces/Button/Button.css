@@ -1,0 +1,33 @@
+.Button {
+    outline: none;
+    border: none;
+    background-color: #687ece;
+    border-radius: 4px;
+    font-weight: bold;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    margin: 16px auto;
+    color: white;
+    cursor: pointer;
+    width: 260px;
+    height: 44px;
+    transition: background-color 0.3s;
+}
+
+.Button:disabled {
+    background-color: #4e4e4e !important;
+    opacity: 0.6;
+    cursor: default;
+}
+
+.Button:hover {
+    background-color: #4c60a8;
+}
+
+.SideBar {
+    margin: 0;
+    width: auto;
+    padding: 0 12px;
+    height: 40px;
+    border: 2px solid #e2e2e2;
+}

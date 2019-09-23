@@ -1,0 +1,67 @@
+.NavigationItem {
+    list-style: none;
+    padding: 12px 0;
+    margin-left: 8px;
+}
+
+.LinkElement {
+    text-decoration: none;
+    color: white;
+    padding: 12px 16px;
+}
+
+.LinkElement span {
+    position: relative;
+}
+
+.LinkElement span::before {
+    content: " ";
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    background-color: #f1ee0a;
+    position: absolute;
+    bottom: -4px;
+    transition: transform 0.3s;
+}
+
+.LinkElement:hover span::before {
+    transform: scaleX(1);
+}
+
+.DivElement {
+    user-select: none;
+    cursor: pointer;
+}
+
+.Icon {
+    display: none;
+}
+
+.active span::before {
+    transform: scaleX(1);
+}
+
+.SideBar.NavigationItem {
+    width: 100%;
+    padding: 0;
+    margin-left: 0;
+}
+
+.SideBar .LinkElement {
+    display: flex;
+    align-items: center;
+}
+
+.SideBar .Icon {
+    height: 26px;
+    width: 26px;
+    margin: 0 16px;
+    display: block;
+    opacity: 0.6;
+}
+
+.SideBar div.Icon {
+    border-radius: 50%;
+    opacity: 1;
+}

@@ -1,0 +1,47 @@
+.SideBar {
+    position: fixed;
+    width: 285px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 50;
+    background-color: lightskyblue;
+    box-sizing: border-box;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-out;
+}
+
+.Show {
+    transform: translateX(0);
+}
+
+.SideBar > nav {
+    overflow-y: auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.Head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    background-color: #00000023;
+    box-shadow: 0 0 10px 2px #888888;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    height: 60px;
+}
+
+.Footer p {
+    color: white;
+    user-select: none;
+    font-size: 14px;
+    margin: 6px 0px 6px 32px;
+}
+
+.Footer {
+    padding: 24px 0;
+}

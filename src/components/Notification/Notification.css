@@ -1,0 +1,28 @@
+.Notification {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 285px;
+    background-color: #67C58F;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
+    color: white;
+    user-select: none;
+    transform: translateX(400px);
+    transition: transform 0.3s;
+    z-index: 5;
+}
+
+.Left {
+    right: initial;
+    left: 40px;
+    transform: translateX(-400px);
+}
+
+.Show {
+    transform: translateX(0);
+}
+
+.Notification p {
+    margin-left: 16px; 
+}

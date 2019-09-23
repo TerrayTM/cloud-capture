@@ -1,0 +1,26 @@
+.NavigationBar {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #00000023;
+    box-shadow: 0 0 10px 2px #888888;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 32px; 
+    height: 60px;
+}
+
+.NavigationBar button {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .DesktopOnly {
+        display: none;
+    }
+
+    .NavigationBar button {
+        display: block;
+    }
+}

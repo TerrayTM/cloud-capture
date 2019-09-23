@@ -1,0 +1,33 @@
+.NavigationItems {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.New {
+    background-color: #525252;
+    border-radius: 4px;
+}
+
+.Join {
+    background-color: #ec5252;
+    border-radius: 4px;
+}
+
+.New:hover,
+.Join:hover {
+    box-shadow: 0 0 2px 2px #00ffff9c;
+}
+
+.New span::before,
+.Join span::before {
+    display: none;
+}
+
+.SideBar {
+    flex-flow: column;
+    align-items: flex-start;
+}

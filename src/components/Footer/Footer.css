@@ -1,0 +1,30 @@
+.Footer {
+    padding: 24px;
+    background-color: #028484;
+    margin-top: auto;
+}
+
+.Footer > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Footer p {
+    margin: 0;
+}
+
+.Footer a {
+    text-decoration: none;
+    color: #b8ddfd;
+}
+
+@media (max-width: 600px) {
+    .Footer > div {
+        flex-flow: column;
+        align-items: center;
+    }
+    
+    .Footer > div > p:last-child {
+        margin-top: 8px;
+    }
+}

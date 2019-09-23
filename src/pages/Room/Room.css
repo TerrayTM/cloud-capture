@@ -1,0 +1,169 @@
+.Header {
+    padding: 60px 0; 
+    background-color: #66BAFA;
+    text-align: center;
+    cursor: default;
+    user-select: none;
+}
+
+.Header > div {
+    display: flex;
+    justify-content: center;
+}
+
+.Header p {
+    margin-bottom: 0;
+}
+
+.Header h1 {
+    font-size: 78px;
+    margin: 0 0 0 16px;
+    background-color: #008f00;
+    padding: 4px 20px;
+    border-radius: 4px;
+    font-family: "Inconsolata", sans-serif;
+    cursor: pointer;
+    max-width: 270px;
+}
+
+.Header h2 {
+    font-size: 32px;
+}
+
+.Header input {
+    position: fixed;
+    top: -100px;
+}
+
+.Main {
+    padding: 80px 0 100px 0; 
+}
+
+.Main > div {
+    max-width: 1200px;
+    width: 80%;
+    margin: auto;
+}
+
+.UploadLabel {
+    background: none;
+    border: none;
+    outline: none;
+    color: blue;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.UploadControl {
+    display: none;
+}
+
+.Info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.Info h4 {
+    margin: 0;
+}
+
+.LoaderHolder {
+    margin: 60px 0;
+    text-align: center;
+}
+
+.LoaderHolder p {
+    margin: 0;
+}
+
+.Reload {
+    cursor: pointer;
+    color: #465fff;
+}
+
+.Reload:hover {
+    text-decoration: underline;
+}
+
+.Drag {
+    position: relative;
+    border: 6px dotted transparent;
+}
+
+.Double {
+    display: flex;
+}
+
+.Double > p:last-child {
+    margin-left: 8px;
+}
+
+.ShowDrag::before {
+    content: " ";
+    background-color: lightskyblue;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    position: absolute;
+}
+
+.ShowDrag::after {
+    content: "Drag and drop files here!";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    font-size: 28px;
+    position: absolute;
+}
+
+.ShowDrag {
+    border-color: white;
+}
+
+.MobileOnly {
+    display: none;
+}
+
+.Status {
+    color: #0b6094;
+    font-family: "Lato", sans-serif;
+}
+
+@media (max-width: 1100px) {
+    .Header > div {
+        flex-flow: column;
+    }
+
+    .Header h1 {
+        margin: auto;
+    }
+
+    .Double > p:last-child {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 870px) {
+    .Status {
+        display: block;
+    }
+}
+
+@media (max-width: 800px) {
+    .MobileOnly {
+        display: block;
+    }
+}
+
+@media (max-width: 660px) {
+    .Info {
+        flex-flow: column;
+    }
+
+    .Info h4 {
+        margin-bottom: 8px;
+    }
+}

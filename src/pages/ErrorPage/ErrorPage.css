@@ -1,0 +1,19 @@
+.Error {
+    padding: 128px 0;
+    text-align: center;
+}
+
+.Error > div {
+    max-width: 500px;
+    width: 90%;
+    margin: auto;
+}
+
+.Error h1 {
+    font-size: 38px;
+    margin-bottom: 0;
+}
+
+.Error p {
+    font-size: 16px;
+}

@@ -1,0 +1,23 @@
+.FileArea {
+    display: grid;
+    row-gap: 32px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@media (max-width: 1320px) {
+    .FileArea {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 980px) {
+    .FileArea {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 660px) {
+    .FileArea {
+        grid-template-columns: 1fr;
+    }
+}

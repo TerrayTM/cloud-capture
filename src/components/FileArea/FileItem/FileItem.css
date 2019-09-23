@@ -1,0 +1,50 @@
+.Parent {
+    width: 240px;
+    margin: auto;
+}
+
+.FileItem {
+    border: 10px solid white;
+    border-radius: 4px;
+    width: 220px;
+    height: 160px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../../../assets/images/File.png);
+    background-color: #292929;
+    box-shadow: 0 1px 2px #00000012;
+}
+
+.FileItem div {
+    background-color: ghostwhite;
+    height: 100%;
+    display: flex;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.FileItem div:hover {
+    opacity: 0.9;
+}
+
+.FileItem p {
+    margin: 0;
+    color: darkslategrey;
+    font-size: 24px;
+}
+
+.FileItem a {
+    text-decoration: none;
+    color: darkslategrey;
+}
+
+.Info {
+    margin: 8px 0 0 0;
+    user-select: none;
+    cursor: default;
+}
