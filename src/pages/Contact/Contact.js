@@ -17,21 +17,22 @@ class Contact extends Component {
             method: 'post',
             headers: {
                 'Content-Type': 'application/json',
-                'Accept': 'application/json'
+                'Accept': 'application/json',
+                'API-Route': 'Message'
             },
             body: JSON.stringify({
                 name: data.name,
                 email: data.email,
-                message: `[Cloud Capture] ${data.message}`
-            }) 
+                message: `[Cloud Capture]: ${data.message}`
+            })
         };
         try {
-            let response = await fetch('https://terrytm.com/services/rest_api.php', content);
+            let response = await fetch('https://terrytm.com/api/wain.php', content);
             response = await response.json();
-            if (response.status && response.status === 'SUCCESS') {
+            if (!response.error) {
                 this.setState({ success: true, loading: false });
             } else {
-                this.setState({ error: response.error, loading: false });
+                this.setState({ error: response.message, loading: false });
             }
         } catch (error) {
             this.setState({ error, loading: false });

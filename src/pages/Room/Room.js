@@ -233,9 +233,6 @@ class Room extends Component {
                 </Fragment>
             );
         }
-        if (this.props.error) {
-            header = <h2>Server is currently offline, please <span className={classes.Reload} onClick={() => window.location.reload()}>try again</span> later.</h2>;
-        }
         let status = '';
         if (this.state.max !== 0) {
             if (this.state.skipped > 0) {
@@ -243,6 +240,11 @@ class Room extends Component {
             } else {
                 status = `(uploading ${this.state.upload} of ${this.state.max} file${this.state.max > 1 ? 's' : ''})`;
             }
+        }
+        let filesLabel = <h4>Files Transferred (<div className={classes.UploadLabel} onClick={this.uploadFileLabel}>Upload</div>): {this.props.files.length} <span className={classes.Status}>{status}</span></h4>;
+        if (this.props.error) {
+            header = <h2>Server is currently offline, please <span className={classes.Reload} onClick={() => window.location.reload()}>try again</span> later.</h2>;
+            filesLabel = <h4>Files Transferred: {this.props.files.length} <span className={classes.Status}>{status}</span></h4>;
         }
         return (
             <Fragment>
@@ -252,12 +254,12 @@ class Room extends Component {
                     <div>
                         {header}
                     </div>
-                    {this.props.roomCode && !this.props.error ? <Fragment><p className={classes.MobileOnly}>Use our mobile app for to transfer files!</p><div className={classes.Double}><p className={classes.DesktopOnly}>Hint: you can also drag and drop files below.</p><p>Files are deleted when all users leave the room.</p></div></Fragment> : null}
+                    {this.props.roomCode && !this.props.error ? <div className={classes.Double}><p className={classes.DesktopOnly}>Hint: you can also drag and drop files below.</p><p>Files are deleted when all users leave the room.</p></div> : null}
                 </section>
                 <section className={classes.Main} onDragEnter={() => ++this.dragCount} onDragOver={this.dragEvent} onDrop={this.dropEvent} onDragLeave={this.dragLeaveEvent}>
                     <div>
                         <div className={classes.Info}>
-                            <h4>Files Transferred (<button className={classes.UploadLabel} onClick={this.uploadFileLabel}>Upload</button>): {this.props.files.length} <span className={classes.Status}>{status}</span></h4>
+                            {filesLabel}
                             <h4>Users in this Room: {this.props.onlineUsers}</h4>
                             <input className={classes.UploadControl} type="file" ref={this.uploadControl} onChange={this.doUploadFile}/>
                         </div>
